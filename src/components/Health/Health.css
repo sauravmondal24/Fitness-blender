@@ -1,0 +1,9 @@
+.yogaList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+.bannerImg {
+	height: 200px;
+	width: auto;
+}
