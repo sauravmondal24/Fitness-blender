@@ -13,7 +13,7 @@ const Yoga = (props) => {
 							<h5 class="card-title">{title}</h5>
 							<p class="card-text">{description.slice(0, 140)}...</p>
 							<h6 class="card-text">For Age : {age}</h6>
-							<h6 class="card-text">Time required : {time}</h6>
+							<h6 class="card-text">Time required : {time}s</h6>
 						</div>
 						<div class="card-footer">
 							<button className="btn btn-primary w-100 fw-bold">
