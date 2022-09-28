@@ -1,5 +1,6 @@
 import React from 'react';
 import Health from '../Health/Health';
+import Profile from '../Profile/Profile';
 import './Home.css';
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
 						<Health></Health>
 					</div>
 					<div className="col-md-3 bg-white profileSec">
-						<h2>Saurav Mondal</h2>
+						<Profile></Profile>
 					</div>
 				</div>
 			</div>
