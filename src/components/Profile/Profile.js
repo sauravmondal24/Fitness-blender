@@ -4,12 +4,12 @@ import AddABreak from './AddABreak';
 import PersonalInfo from './PersonalInfo';
 import ExerciseDetails from './ExerciseDetails';
 
-const Profile = () => {
+const Profile = ({ time }) => {
 	return (
 		<div>
 			<PersonalInfo></PersonalInfo>
 			<AddABreak></AddABreak>
-			<ExerciseDetails></ExerciseDetails>
+			<ExerciseDetails time={time}></ExerciseDetails>
 		</div>
 	);
 };

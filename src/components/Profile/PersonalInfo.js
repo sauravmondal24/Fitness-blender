@@ -6,7 +6,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 const PersonalInfo = () => {
 	return (
 		<div>
-			<div className="pt-5 pb-3 d-flex">
+			<div className="pt-4 pb-3 d-flex">
 				<div>
 					<img
 						className="img-fluid img-circle profileImg me-3"
