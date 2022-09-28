@@ -1,4 +1,5 @@
 import React from 'react';
+// import FAQ from '../FAQ/FAQ';
 
 const ExerciseDetails = ({ time }) => {
 	// console.log(time);
@@ -23,9 +24,16 @@ const ExerciseDetails = ({ time }) => {
 				</p>
 			</div>
 
-			<button className="btn btn-primary btn-lg w-100 mt-4">
+			<button className="btn btn-primary btn-lg w-100 mt-2">
 				Activity Completed
 			</button>
+			<div className="text-center">
+				<a href="/FAQ.js">
+					<button className="btn btn-warning fw-bold btn-md w-75 m-auto mt-2">
+						FAQ
+					</button>
+				</a>
+			</div>
 		</div>
 	);
 };
