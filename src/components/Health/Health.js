@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import FAQ from '../FAQ/FAQ';
 import Profile from '../Profile/Profile';
 import Yoga from '../Yoga/Yoga';
 import './Health.css';
@@ -14,10 +15,8 @@ const Health = () => {
 	}, []);
 
 	const clickListBtn = (health) => {
-		console.log(health);
 		const newTime = [...time, health];
 		setTime(newTime);
-		// console.log(time.length);
 	};
 
 	return (
@@ -33,9 +32,7 @@ const Health = () => {
 									alt=""
 								/>
 							</header>
-							<h3 className=" text-primary">
-								Select today’s exercise {time.length}
-							</h3>
+							<h3 className=" text-primary pt-4">Select today’s exercise</h3>
 							<div className="yogaList">
 								{healths.map((health) => (
 									<Yoga
@@ -45,6 +42,7 @@ const Health = () => {
 									></Yoga>
 								))}
 							</div>
+							<FAQ></FAQ>
 						</div>
 
 						<div className="col-md-3 bg-white profileSec">

@@ -10,7 +10,7 @@ const Yoga = ({ health, clickListBtn }) => {
 					<h5 class="card-title">{title}</h5>
 					<p class="card-text">{description.slice(0, 140)}...</p>
 					<h6 class="card-text">For Age : {age}</h6>
-					<h6 class="card-text">Time required : {times}s</h6>
+					<h6 class="card-text">Time required : {times}h</h6>
 				</div>
 				<div class="card-footer">
 					<button

@@ -8,32 +8,33 @@ const ExerciseDetails = ({ time }) => {
 	for (const newTime of time) {
 		totalTime = totalTime + newTime.times;
 	}
+
 	return (
 		<div>
 			<h5>Exercise Details</h5>
 			<div className="d-flex justify-content-between align-items-center px-3 py-2 bg-light rounded-4">
 				<h6>Exercise time</h6>
 				<p>
-					{totalTime} <span>seconds</span>
+					{totalTime} <span>hour</span>
 				</p>
 			</div>
 			<div className="d-flex justify-content-between align-items-center mt-3 px-3 py-2 bg-light rounded-4">
 				<h6>Break time</h6>
 				<p>
-					0 <span>seconds</span>
+					0 <span>hour</span>
 				</p>
 			</div>
 
-			<button className="btn btn-primary btn-lg w-100 mt-2">
+			<button className="btn btn-primary btn-lg w-100 mt-4">
 				Activity Completed
 			</button>
-			<div className="text-center">
+			{/* <div className="text-center">
 				<a href="/FAQ.js">
 					<button className="btn btn-warning fw-bold btn-md w-75 m-auto mt-2">
 						FAQ
 					</button>
 				</a>
-			</div>
+			</div> */}
 		</div>
 	);
 };
