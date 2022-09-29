@@ -23,14 +23,14 @@ const ExerciseDetails = ({ time, data: { exerciseData } }) => {
 	return (
 		<div>
 			<h5>Exercise Details</h5>
-			<div className="d-flex justify-content-between align-items-center px-3 py-2 bg-light rounded-4 shadow">
+			<div className="d-flex justify-content-between align-items-center px-3 py-2 bg-light rounded-4 ">
 				<h6>Exercise time</h6>
 				<p>
 					{totalTime} <span>hour</span>
 				</p>
 			</div>
 
-			<div className="d-flex justify-content-between align-items-center mt-3 px-3 py-2 bg-light rounded-4 shadow">
+			<div className="d-flex justify-content-between align-items-center mt-3 px-3 py-2 bg-light rounded-4 ">
 				<h6>Break time</h6>
 				<p>
 					{exerciseData} <span>hour</span>

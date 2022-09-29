@@ -9,14 +9,14 @@ const PersonalInfo = () => {
 			<div className="pt-4 pb-3 d-flex">
 				<div>
 					<img
-						className="img-fluid img-circle profileImg me-3"
+						className="img-fluid img-circle profileImg me-2"
 						src={img}
 						alt=""
 					/>
 				</div>
 
 				<div>
-					<h5>Saurav Mondal</h5>
+					<h5 className="ps-2">Saurav Mondal</h5>
 					<p>
 						<span className="px-1">
 							<FontAwesomeIcon icon={faLocationDot} />
@@ -26,7 +26,7 @@ const PersonalInfo = () => {
 				</div>
 			</div>
 
-			<div className="d-flex justify-content-between bg-light px-4 py-2 rounded shadow">
+			<div className="d-flex justify-content-between bg-light px-4 py-2 rounded">
 				<div>
 					<h4>
 						65<span className="fs-6 fw-normal">kg</span>

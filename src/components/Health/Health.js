@@ -52,8 +52,6 @@ const Health = () => {
 				</div>
 			</div>
 		</div>
-
-		// Hew sec
 	);
 };
 

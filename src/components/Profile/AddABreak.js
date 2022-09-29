@@ -4,18 +4,15 @@ import { addToLS } from '../../utilities/localStorage';
 const AddABreak = (props) => {
 	const { setData } = props;
 	const breakHandler = (e) => {
-		console.log(e.target.value);
 		setData({ exerciseData: e.target.value });
 		let addDataToLS = e.target.value;
-
 		addToLS(addDataToLS);
 	};
-
 	return (
 		<div className="my-3  ">
 			<h5>Add A Break</h5>
 
-			<div className="d-flex justify-content-between bg-light p-4  rounded shadow">
+			<div className="d-flex justify-content-between bg-light p-4  rounded">
 				<button
 					onClick={breakHandler}
 					value={1}

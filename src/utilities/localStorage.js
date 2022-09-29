@@ -1,14 +1,11 @@
-// use local storage to manage cart data
 const addToLS = (id) => {
 	let breakTime = {};
 
-	//get the shopping cart from local storage
-	const storedCart = localStorage.getItem('break-time');
-	if (storedCart) {
-		breakTime = JSON.parse(storedCart);
+	const storedTime = localStorage.getItem('break-time');
+	if (storedTime) {
+		breakTime = JSON.parse(storedTime);
 	}
 
-	// add quantity
 	const time = breakTime[id];
 	if (time) {
 		const newTime = time + 1;
@@ -18,18 +15,6 @@ const addToLS = (id) => {
 	}
 	localStorage.setItem('break-time', JSON.stringify(breakTime));
 };
-
-const getStoredTime = () => {
-	let breakTime = {};
-
-	//get the shopping cart from local storage
-	const storedTime = localStorage.getItem('break-time');
-	if (storedTime) {
-		breakTime = JSON.parse(storedTime);
-	}
-	return breakTime;
-};
-
 const removeFromDb = (id) => {
 	const storedTime = localStorage.getItem('break-time');
 	if (storedTime) {
@@ -41,4 +26,4 @@ const removeFromDb = (id) => {
 	}
 };
 
-export { addToLS, getStoredTime, removeFromDb };
+export { addToLS, removeFromDb };
