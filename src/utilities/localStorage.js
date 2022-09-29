@@ -1,48 +1,44 @@
 // use local storage to manage cart data
 const addToLS = (id) => {
-	let shoppingCart = {};
+	let breakTime = {};
 
 	//get the shopping cart from local storage
-	const storedCart = localStorage.getItem('shopping-cart');
+	const storedCart = localStorage.getItem('break-time');
 	if (storedCart) {
-		shoppingCart = JSON.parse(storedCart);
+		breakTime = JSON.parse(storedCart);
 	}
 
 	// add quantity
-	const quantity = shoppingCart[id];
-	if (quantity) {
-		const newQuantity = quantity + 1;
-		shoppingCart[id] = newQuantity;
+	const time = breakTime[id];
+	if (time) {
+		const newTime = time + 1;
+		breakTime[id] = newTime;
 	} else {
-		shoppingCart[id] = 1;
+		breakTime[id] = 1;
 	}
-	localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+	localStorage.setItem('break-time', JSON.stringify(breakTime));
 };
 
-const getStoredCart = () => {
-	let shoppingCart = {};
+const getStoredTime = () => {
+	let breakTime = {};
 
 	//get the shopping cart from local storage
-	const storedCart = localStorage.getItem('shopping-cart');
-	if (storedCart) {
-		shoppingCart = JSON.parse(storedCart);
+	const storedTime = localStorage.getItem('break-time');
+	if (storedTime) {
+		breakTime = JSON.parse(storedTime);
 	}
-	return shoppingCart;
+	return breakTime;
 };
 
 const removeFromDb = (id) => {
-	const storedCart = localStorage.getItem('shopping-cart');
-	if (storedCart) {
-		const shoppingCart = JSON.parse(storedCart);
-		if (id in shoppingCart) {
-			delete shoppingCart[id];
-			localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+	const storedTime = localStorage.getItem('break-time');
+	if (storedTime) {
+		const breakTime = JSON.parse(storedTime);
+		if (id in breakTime) {
+			delete breakTime[id];
+			localStorage.setItem('break-time', JSON.stringify(breakTime));
 		}
 	}
 };
 
-const deleteShoppingCart = () => {
-	localStorage.removeItem('shopping-cart');
-};
-
-export { addToLS, getStoredCart, removeFromDb, deleteShoppingCart };
+export { addToLS, getStoredTime, removeFromDb };

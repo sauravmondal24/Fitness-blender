@@ -26,7 +26,7 @@ const PersonalInfo = () => {
 				</div>
 			</div>
 
-			<div className="d-flex justify-content-between bg-light px-4 py-2 rounded">
+			<div className="d-flex justify-content-between bg-light px-4 py-2 rounded shadow">
 				<div>
 					<h4>
 						65<span className="fs-6 fw-normal">kg</span>
