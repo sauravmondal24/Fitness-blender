@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { addToLS } from '../../utilities/localStorage';
 
-const AddABreak = () => {
-	const breakHandler = (props) => {
-		console.log(props);
-		addToLS(props);
+const AddABreak = (props) => {
+	const { setData } = props;
+	const breakHandler = (e) => {
+		console.log(e.target.value);
+		setData({ exerciseData: e.target.value });
+		let addDataToLS = e.target.value;
+
+		addToLS(addDataToLS);
 	};
 
 	return (
@@ -13,35 +17,40 @@ const AddABreak = () => {
 
 			<div className="d-flex justify-content-between bg-light p-4  rounded shadow">
 				<button
-					onClick={() => breakHandler(10)}
-					className="btn btn-outline-primary rounder p-1"
+					onClick={breakHandler}
+					value={1}
+					className="btn btn-outline-primary rounder p-2"
 					id=""
 				>
-					10<span>h</span>
+					1<span>h</span>
 				</button>
 				<button
-					onClick={() => breakHandler(20)}
-					className="btn btn-outline-primary rounder p-1"
+					onClick={breakHandler}
+					className="btn btn-outline-primary rounder p-2"
+					value={2}
 				>
-					20<span>h</span>
+					2<span>h</span>
 				</button>
 				<button
-					onClick={() => breakHandler(30)}
-					className="btn btn-outline-primary rounder p-1"
+					onClick={breakHandler}
+					className="btn btn-outline-primary rounder p-2"
+					value={3}
 				>
-					30<span>h</span>
+					3<span>h</span>
 				</button>
 				<button
-					onClick={() => breakHandler(40)}
-					className="btn btn-outline-primary rounder p-1"
+					onClick={breakHandler}
+					className="btn btn-outline-primary rounder p-2"
+					value={4}
 				>
-					40<span>h</span>
+					4<span>h</span>
 				</button>
 				<button
-					onClick={() => breakHandler(50)}
-					className="btn btn-outline-primary rounder p-1"
+					onClick={breakHandler}
+					className="btn btn-outline-primary rounder p-2"
+					value={5}
 				>
-					50<span>h</span>
+					5<span>h</span>
 				</button>
 			</div>
 		</div>

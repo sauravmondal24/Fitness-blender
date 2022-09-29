@@ -2,7 +2,7 @@ import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const ExerciseDetails = ({ time }) => {
+const ExerciseDetails = ({ time, data: { exerciseData } }) => {
 	const notify = () => {
 		toast.success('Congratulation, Done your activity!', {
 			position: 'top-center',
@@ -33,7 +33,7 @@ const ExerciseDetails = ({ time }) => {
 			<div className="d-flex justify-content-between align-items-center mt-3 px-3 py-2 bg-light rounded-4 shadow">
 				<h6>Break time</h6>
 				<p>
-					0 <span>hour</span>
+					{exerciseData} <span>hour</span>
 				</p>
 			</div>
 
