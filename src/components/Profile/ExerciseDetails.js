@@ -1,8 +1,19 @@
 import React from 'react';
-// import FAQ from '../FAQ/FAQ';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ExerciseDetails = ({ time }) => {
-	// console.log(time);
+	const notify = () => {
+		toast.success('Congratulation, done your activity!', {
+			position: 'top-center',
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined
+		});
+	};
 
 	let totalTime = 0;
 	for (const newTime of time) {
@@ -24,17 +35,12 @@ const ExerciseDetails = ({ time }) => {
 					0 <span>hour</span>
 				</p>
 			</div>
-
-			<button className="btn btn-primary btn-lg w-100 mt-4">
-				Activity Completed
-			</button>
-			{/* <div className="text-center">
-				<a href="/FAQ.js">
-					<button className="btn btn-warning fw-bold btn-md w-75 m-auto mt-2">
-						FAQ
-					</button>
-				</a>
-			</div> */}
+			<div>
+				<button onClick={notify} className="btn btn-primary btn-lg w-100 mt-4">
+					Activity Completed
+				</button>
+				<ToastContainer />
+			</div>
 		</div>
 	);
 };
